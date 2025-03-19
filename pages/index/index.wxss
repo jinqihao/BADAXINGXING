@@ -1,0 +1,95 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 0 30rpx;
+}
+
+.timer-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 10rpx 20rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 60rpx;
+}
+
+.time-text {
+  font-size: 80rpx;
+  font-weight: 300;
+  color: #333;
+}
+
+.input-area {
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.input-label {
+  width: 100rpx;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.time-input {
+  flex: 1;
+  height: 80rpx;
+  background-color: white;
+  border-radius: 8rpx;
+  padding: 0 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.btn-area {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.timer-btn {
+  width: 45%;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.start {
+  background-color: #4cd964;
+  color: white;
+}
+
+.pause {
+  background-color: #ff9500;
+  color: white;
+}
+
+.reset {
+  background-color: #ffffff;
+  color: #666;
+}

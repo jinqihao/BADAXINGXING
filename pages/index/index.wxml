@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="timer-display">
+      <text class="time-text">{{minutes < 10 ? '0' + minutes : minutes}}:{{seconds < 10 ? '0' + seconds : seconds}}</text>
+    </view>
+    
+    <view class="input-area" wx:if="{{!isRunning}}">
+      <view class="input-group">
+        <text class="input-label">分钟:</text>
+        <input class="time-input" type="number" value="{{minutes}}" bindinput="setMinutes" />
+      </view>
+      <view class="input-group">
+        <text class="input-label">秒钟:</text>
+        <input class="time-input" type="number" value="{{seconds}}" bindinput="setSeconds" />
+      </view>
+    </view>
+    
+    <view class="btn-area">
+      <button class="timer-btn {{isRunning ? 'pause' : 'start'}}" bindtap="toggleTimer">
+        {{isRunning ? '暂停' : '开始'}}
+      </button>
+      <button class="timer-btn reset" bindtap="resetTimer">重置</button>
+    </view>
+  </view>
+</scroll-view>
